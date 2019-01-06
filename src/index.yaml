@@ -1,0 +1,5 @@
+ProjectTitle: vesta
+
+PageList:
+- file: page.html
+  ready: 50

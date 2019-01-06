@@ -1,0 +1,57 @@
+<!-- contacts begin -->
+<div class="contacts" id="contacts">
+	<div class="inner contacts__inner">
+		<h2 class="title contacts__title">Contact <strong>us</strong></h2>
+		<div class="contacts__subtitle">
+			Don't hesitate to get in contact with us no matter your request. We are here to help you.
+		</div>
+		<form action="/" class="form js-validate">
+			{% for item in [
+				{
+					placeholder: 'Name*',
+					input: true,
+					required: 'required',
+					name: 'name="name"'
+				},
+				{
+					placeholder: 'Email*',
+					input: true,
+					required: 'required',
+					type: email,
+					name: 'name="email"'
+				},
+				{
+					placeholder: 'Phone',
+					input: true,
+					type: tel
+				},
+				{
+					placeholder: 'Message*',
+					textarea: true,
+					required: 'required',
+					name: 'name="text"'
+				},
+				{
+					btn: 'SEND MESSAGE'
+				}
+			] %}
+				<div class="form__row">
+					{% if item.input or item.textarea %}
+						<div class="field">
+							{% if item.input %}
+								<input type="{{item.type or 'text'}}" class="field__input" {{item.required | safe}} {{item.name | safe}} placeholder="{{item.placeholder}}">
+							{% endif %}
+							{% if item.textarea %}
+								<textarea class="field__textarea" {{item.required | safe}} {{item.name | safe}} placeholder="{{item.placeholder}}"></textarea>
+							{% endif %}
+						</div>
+					{% endif %}
+					{% if item.btn %}
+						<button class="btn btn_long form__btn"><span class="btn__in">{{item.btn}}</span></button>
+					{% endif %}
+				</div>
+			{% endfor %}
+		</form>
+	</div>
+</div>
+<!-- contacts end -->

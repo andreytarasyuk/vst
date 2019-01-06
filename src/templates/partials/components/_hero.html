@@ -1,0 +1,21 @@
+<!-- hero begin -->
+<div class="hero" id="hero">
+	<div class="inner hero__inner">
+		<div class="phone hero__phone">
+			<div class="hero__slider js-slider-hero">
+				{% for item in ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6'] %}
+					<div class="hero__slider-item">
+						<img src="img/{{item}}.svg" class="hero__slider-img" alt="slide">
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="hero__content">
+			<h1 class="title title_white hero__title">Your digital property and finance management</h1>
+			<div class="hero__subtitle">Giving power back to property owners, landlords and tenants. Property and finance management personalised for you. </div>
+			<div class="hero__description">Established in 2008 to deal with Prime London Property</div>
+			<a href="#" class="btn hero__btn"><span class="btn__in">Start Free Trial</span></a>
+		</div>
+	</div>
+</div>
+<!-- hero end -->

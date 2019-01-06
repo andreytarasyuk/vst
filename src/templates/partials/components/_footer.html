@@ -1,0 +1,45 @@
+<!-- footer begin -->
+<footer class="footer">
+	<div class="footer__inner inner">
+		<div class="footer__container">
+			<a href="#" class="logo footer__logo">{{mixins.icon('vesta', 'logo__in footer__logo-in')}}</a>
+			<div class="footer__copyright">
+				© 2018 Vesta. All rights reserved. Vesta® is a registered trademark.
+			</div>
+		</div>
+		<div class="footer__content">
+			<div class="footer__row">
+				{% for item in [
+					{
+						title: 'Company',
+						list: ['About us', 'Contact us', 'Careers', 'Blog']
+					},
+					{
+						title: 'Product',
+						list: ['Home', 'Features', 'Pricing', 'Testimonials']
+					},
+					{
+						title: 'Legal',
+						list: ['Terms of use', 'Privacy Policy']
+					},
+					{
+						title: 'Follow Use',
+						list: ['LinkedIn', 'Facebook', 'Twitter']
+					}
+				] %}
+					<div class="footer__col">
+						<div class="footer__title">{{item.title}}</div>
+						<ul class="footer__menu">
+							{% for item in item.list %}
+								<li class="footer__item">
+									<a href="#" class="footer__link">{{item}}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- footer end -->

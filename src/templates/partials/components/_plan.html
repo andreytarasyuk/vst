@@ -1,0 +1,51 @@
+<!-- plan begin -->
+<div class="plan" id="plan">
+	<div class="inner">
+		<h2 class="title title_white plan__title">Find your <strong>right plan</strong></h2>
+		<div class="plan__subtitle">
+			No card details needed, cancel at any time. Free one month trial starts from the moment you start using extended features. Available for iPhone. Rent guarantee insurance is excluded from the free trial.
+		</div>
+		<div class="box plan__box">
+			<div class="box__slider js-slider">
+				{% for item in [
+					{
+						value: 'free',
+						title: 'BASIC',
+						desc: 'Store your property details, documents and contracts, view transaction history, access legal templates. Free forever.'
+					},
+					{
+						value: '1.99% <span class="card__circle-value-small">of rent, plus VAT</span>',
+						title: 'EXTENDED',
+						desc: 'All the basic features plus rent collection, one click bill payments, repairs and tenancy management. ',
+						label: true,
+						classList: 'card_popular'
+					},
+					{
+						value: '2.99% <span class="card__circle-value-small">of rent, plus VAT</span>',
+						title: 'PREMIUM',
+						desc: 'All the basic features plus rent collection, one click bill payments, repairs and tenancy management, rent guarantee insurance.'
+					}
+				] %}
+					<div class="box__slider-item">
+						<div class="box__item">
+							<a href="#" class="card {{item.classList}}">
+								<div class="card__circle">
+									<div class="card__circle-value">{{item.value | safe}}</div>
+								</div>
+								<div class="card__title">{{item.title}}</div>
+								<div class="card__description">{{item.desc}}</div>
+								{% if item.label %}
+									<div class="card__label">MOST POPULAR</div>
+								{% endif %}
+							</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="plan__label">
+			If you are an owner occupier, <a href="#" class="plan__label-link">please contact us for a great package</a>
+		</div>
+	</div>
+</div>
+<!-- plan end -->

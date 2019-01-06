@@ -1,0 +1,41 @@
+<header class="header js-header">
+	<div class="header__bg"></div>
+	<div class="inner header__inner">
+		<a href="#" class="logo header__logo">{{mixins.icon('vesta', 'logo__in header__logo-in')}}</a>
+		<a href="#" class="btn header__btn"><span class="btn__in">Start Free Trial</span></a>
+		<div class="header__mobile-menu js-modal" data-modal="modal">
+			<nav class="menu">
+				<ul class="menu__list">
+					{% for item in [
+						{
+							text: 'HOW IT WORKS',
+							id: 'works'
+						},
+						{
+							text: 'CUSTOMERS',
+							id: 'customers'
+						},
+						{
+							text: 'PRICING',
+							id: 'plan'
+						},
+						{
+							text: 'REVIEWS',
+							id: 'comments'
+						},
+						{
+							text: 'CONTACT',
+							id: 'contacts'
+						}
+					] %}
+						<li class="menu__item">
+							<a href="#{{item.id}}" class="menu__link js-scroll-to">{{item.text}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+			<button class="btn-close js-modal-control" data-target="modal">{{mixins.icon('close', 'btn-close__icon')}}</button>
+		</div>
+		<button class="btn-nav js-modal-control" data-target="modal">{{mixins.icon('burger', 'btn-nav__icon')}}</button>
+	</div>
+</header>

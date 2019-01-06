@@ -1,0 +1,26 @@
+.field
+	&__input,
+	&__textarea
+		display: block
+		width: 100%
+		background: $white
+		color: $black
+		box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.06)
+		border-radius: 6px
+		border: 1px solid transparent
+		font-family: $montserrat
+		+f(16px, 500, normal)
+		+placeholder-color(#91A3B7)
+		transition: color .3s
+		&.error
+			+placeholder-color(#F06580)
+			color: #F06580
+	&__input
+		height: 70px
+		padding: 2px 15px
+	&__textarea
+		height: 294px
+		padding: 25px 15px
+		resize: none
+		+sm
+			height: 218px

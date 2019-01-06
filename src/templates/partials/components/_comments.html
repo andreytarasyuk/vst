@@ -1,0 +1,43 @@
+<!-- comments begin -->
+<div class="comments" id="comments">
+	<div class="inner">
+		<h2 class="title comments__title">What <strong>people say</strong></h2>
+		<div class="slider comments__slider">
+			<div class="slider__container js-slider-comments">
+				{% for item in [
+					{
+						title: 'JEREMY, SINGAPORE',
+						label: 'Overseas landlord, 1 unit',
+						text: '“A simple and effective way to manage my UK property from overseas. I can finally stop worrying about paying bills and maintenance”'
+					},
+					{
+						title: 'LOUISE, RICHMOND',
+						label: 'London landlord, 3 units',
+						text: ' "I finally stopped using an estate agency and do not miss it. Guys are super practical and attractively priced"'
+					},
+					{
+						title: 'CHRIS, KENSINGTON',
+						label: 'London owner-occupier, 1 unit',
+						text: ' "For me who hates paperwork its a really convenient way to handle everything online. I can stay on top of my payments and save time"'
+					},
+					{
+						title: 'JEREMY, SINGAPORE',
+						label: 'Overseas landlord, 1 unit',
+						text: '“A simple and effective way to manage my UK property from overseas. I can finally stop worrying about paying bills and maintenance”'
+					}
+				] %}
+					<div class="slider__item">
+						<div class="comments__item">
+							<div class="comments__item-title">{{item.title}}</div>
+							<div class="comments__item-label">{{item.label}}</div>
+							<div class="comments__item-text">{{item.text}}</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+			<button class="slider__arrow slider__arrow_prev js-slider-prev">{{mixins.icon('arrow-left', 'arrow__in')}}</button>
+			<button class="slider__arrow slider__arrow_next js-slider-next">{{mixins.icon('arrow-right', 'arrow__in')}}</button>
+		</div>
+	</div>
+</div>
+<!-- comments end -->

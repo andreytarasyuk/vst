@@ -1,0 +1,117 @@
+.header
+	position: fixed
+	z-index: 100
+	top: 0
+	left: 0
+	width: 100%
+	padding: 30px 0
+	transform: translateY(5px)
+	transition: padding .3s, transform .3s
+	+lg
+		padding: 20px 0
+	+sm
+		padding: 10px 0
+		transform: translateY(10px)
+	&.is-active
+		transform: translateY(0)
+		.header__bg
+			&:before
+				transform: translateX(-75%)
+		.header__mobile-menu
+			+md
+				transform: translateY(0)
+		.btn-close
+			+md
+				transform: translateY(-5px)
+			+sm
+				transform: translateY(-10px)
+	&__bg
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		overflow: hidden
+		&:before
+			content: ""
+			z-index: -1
+			position: absolute
+			left: 0
+			top: 0
+			width: 400%
+			height: 400%
+			background: linear-gradient(112.74deg, rgba(0,0,0,0), rgba(0,0,0,0), #01A0D3 , #0168d3)
+			transition: transform .3s
+			will-change: transform
+	&__inner
+		position: relative
+		max-width: 1920px
+		padding-left: 45px
+		padding-right: 45px
+		+lg
+			padding-left: 30px
+			padding-right: 30px
+		+md
+			padding-right: 93px
+		+sm
+			padding-left: 20px
+			padding-right: 60px
+	&__btn
+		float: right
+		margin-left: 13px
+		+sm
+			display: none
+	&__logo
+		float: left
+		position: relative
+		z-index: 1001
+		+sm
+			padding: 11px 0
+		&-in
+			+sm
+				font-size: 28px
+	&__mobile-menu
+		float: right
+		+md
+			float: none
+			position: fixed
+			z-index: 1000
+			left: 0
+			top: 0
+			right: 0
+			height: 100vh
+			padding: 90px 0 30px
+			overflow: auto
+			min-width: 320px
+			opacity: 0
+			visibility: hidden
+			background: linear-gradient(112.74deg, #01A0D3 , #0168d3)
+			transform: translateY(-5px)
+			transition: opacity .3s,visibility .3s, transform .3s
+			+vertical
+		+sm
+			transform: translateY(-10px)
+			padding: 70px 0 30px
+		&.is-open
+			opacity: 1
+			visibility: visible
+
+.menu
+	font-size: 0
+	+md
+		display: inline-block
+		vertical-align: middle
+	&__item
+		display: inline-block
+		vertical-align: top
+		padding: 0 15px
+		+md
+			display: block
+			padding: 15px
+	&__link
+		display: block
+		padding: 17px 10px
+		text-transform: uppercase
+		text-decoration: none
+		color: $white
+		+f(16px, 500, 1)

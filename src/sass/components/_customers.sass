@@ -1,0 +1,68 @@
+.customers
+	padding-top: 142px
+	+sm
+		padding-top: 80px
+	&__inner
+		max-width: 956px
+		+xmd
+			max-width: 930px
+	&__title
+		margin-bottom: 133px
+		+xmd
+			margin-bottom: 113px
+		+sm
+			margin-bottom: 70px
+	&__controls
+		display: flex
+		+xmd
+			background: linear-gradient(90deg, #01A0D3 , #0168d3)
+			border-radius: 11px 11px 0 0
+	&__control
+		flex: 1 0 0
+		max-width: 100%
+		color: #0A8DD4
+		padding: 0 50px
+		text-decoration: none
+		pointer-events: none
+		+f(18px, 600, 1)
+		+md
+			padding: 0 20px
+		+xmd
+			position: relative
+			padding: 28px 20px
+			color: $white
+			text-align: center
+			pointer-events: auto
+			transition: background-color .3s, color .3s
+		+sm
+			font-size: 14px
+		&.is-active
+			+xmd
+				background-color: $white
+				color: #0A8DD4
+	&__item
+		flex: 1 0 0
+		max-width: 100%
+		padding: 0 50px
+		+md
+			padding: 0 20px
+		+xmd
+			padding: 55px 58px 15px
+		+sm
+			padding: 0 20px
+	&__tabs
+		margin: 0 -50px
+		+md
+			margin: 0
+		+xmd
+			margin: 0 20px
+			box-shadow: 0px 6px 22px rgba(101, 101, 101, 0.11)
+		+sm
+			margin: 0 -20px 45px
+			box-shadow: none
+	&__content
+		display: flex
+		padding-top: 40px
+		+xmd
+			padding: 0
+			display: block

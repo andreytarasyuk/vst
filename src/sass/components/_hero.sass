@@ -1,0 +1,72 @@
+.hero
+	padding: 200px 0 28px
+	background: url('../img/preview-bg.png')
+	background-size: cover
+	background-position: center bottom
+	+xmd
+		padding-top: 155px
+		margin-bottom: 105px
+		background-position: left bottom
+	+sm
+		padding: 93px 0 0
+		margin-bottom: 0
+		text-align: center
+		background-size: auto
+		background-repeat: no-repeat
+		background-position: center top
+	&__inner
+		display: flex
+		+sm
+			flex-direction: column
+	&__phone
+		flex-shrink: 0
+		margin-bottom: -130px
+		+xmd
+			margin-left: 46px
+			margin-bottom: -180px
+		+sm
+			margin: 0 auto
+			order: 1
+		+r(330)
+			margin-left: -8px
+	&__slider
+		width: 100%
+		height: 100%
+		font-size: 0
+		line-height: 0
+		overflow: hidden
+		&-img
+			width: 100%
+			height: 460px
+			max-width: 100%
+	&__content
+		flex-grow: 1
+		padding: 30px 0 0 90px
+		+xmd
+			padding-left: 40px
+		+sm
+			padding: 0
+	&__title
+		margin-bottom: 37px
+		text-align: left
+		+xmd
+			font-size: 32px
+		+sm
+			text-align: center
+			margin-bottom: 25px
+	&__subtitle
+		color: $white
+		margin-bottom: 40px
+		+f(null, null, 1.44)
+		+sm
+			margin-bottom: 25px
+	&__description
+		color: $white
+		margin-bottom: 60px
+		+f(14px, null, null)
+		+sm
+			margin-bottom: 35px
+	&__btn
+		margin-bottom: 20px
+		+sm
+			margin-bottom: 40px

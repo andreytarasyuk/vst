@@ -1,0 +1,85 @@
+<!-- customers begin -->
+<div class="customers" id="customers">
+	<div class="inner customers__inner">
+		<h2 class="title customers__title">Our <strong>customers</strong></h2>
+		<div class="tabs customers__tabs js-tabs" data-tab-active="1">
+			<div class="tabs__controls customers__controls">
+				{% for item in [
+					{
+						classList: 'is-active',
+						attr: '1',
+						control: 'Landlords'
+					},
+					{
+						attr: '2',
+						control: 'Owners'
+					}
+				] %}
+					<a href="#" data-tab="{{item.attr}}" class="tabs__control customers__control {{item.classList}}">{{item.control}}</a>
+				{% endfor %}
+			</div>
+			<div class="tabs__content customers__content">
+				{% for item in [
+					{
+						attr: '1',
+						classList: 'is-active',
+						rowItems: [
+							{
+								image: 'image',
+								title: 'Type benefit title here',
+								text: 'Whether your portfolio consist of one property or many more, we can provide you with all the features to manage it with ease leaving you in control. <strong>Everything you would expect from a management agency only so much more and cheaper.</strong>'
+							},
+							{
+								image: 'image-1',
+								title: 'Type benefit title here',
+								text: 'Its time to say good bye to hidden agent fees, expensive repairs and complex bank reconciliations. <strong>Start collecting rent, making quick payments, tracking expenses, managing repairs and tenancies</strong>'
+							},
+							{
+								image: 'image-2',
+								title: 'Type benefit title here',
+								text: 'Get info for you tax return, portfolio profitability and more. <strong>Save time and money, improve yields and get access to best products and service providers</strong>'
+							}
+						]
+					},
+					{
+						attr: '2',
+						rowItems: [
+							{
+								image: 'image',
+								title: 'Type benefit title here',
+								text: 'Whether you are a busy property owner or short let landlord <strong>have all your property finances and maintenance taken care of</strong>'
+							},
+							{
+								image: 'image-1',
+								title: 'Type benefit title here',
+								text: '<strong>Manage all your payments with one click of a button even from afar.</strong> Have an overview of your transaction history. Get clear categorisation of your property expenses'
+							},
+							{
+								image: 'image-2',
+								title: 'Type benefit title here',
+								text: 'Get competitive quotes for repairs and easy online job management. <strong>Use our smart insights and easy actions so that you can make the most of life.</strong>'
+							}
+						]
+					}
+				] %}
+					<div class="tabs__item customers__item {{item.classList}}" data-content="{{item.attr}}">
+						<div class="tabs__slider js-slider">
+							{% for item in item.rowItems %}
+								<div class="tabs__slider-item">
+									<div class="row-item">
+										<div class="row-item__title">
+											<div class="row-item__img"><img src="img/{{item.image}}.svg" class="row-item__img-in" alt="image"></div>
+											<span class="row-item__title-value">{{item.title}}</span>
+										</div>
+										<div class="row-item__text">{{item.text | safe}}</div>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- customers end -->

@@ -1,0 +1,42 @@
+.plan
+	padding: 142px 0 75px
+	background-image: url("../img/right-plan-bg.png")
+	background-size: 100% auto
+	background-position: center top 80px
+	background-repeat: no-repeat
+	+sm
+		background-position: center top
+		background-size: auto
+		padding: 80px 0 30px
+	&__title
+		margin-bottom: 47px
+		+xmd
+			margin-bottom: 25px
+	&__subtitle
+		max-width: 714px
+		margin: 0 auto 60px
+		color: $white
+		text-align: center
+		+f(null, 500, 1.56)
+		+sm
+			margin-bottom: 32px
+	&__box
+		margin-bottom: 95px
+		+xmd
+			margin-bottom: 0
+		+sm
+			padding-bottom: 68px
+		.slick-dots
+			+sm
+				bottom: -68px
+	&__label
+		text-align: center
+		+f(null, 500, 1.56)
+		+xmd
+			display: none
+		&-link
+			color: #0B8CD4
+			+f(null, 700, null)
+			text-decoration: none
+			+hover
+				text-decoration: underline

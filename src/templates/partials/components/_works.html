@@ -1,0 +1,65 @@
+<!-- works begin -->
+<div class="works" id="works">
+	<div class="inner works__inner">
+		<h2 class="title title_simple title_white works__title">How it works</h2>
+		<div class="works__subtitle">
+			Set up in minutes and personalise a service for you whether you are a landlord, owner-occupier or tenant. Training is not required.
+		</div>
+		<div class="works__container">
+			<div class="phone phone_lg works__phone">
+				<img src="img/slide-2.svg" class="works__phone-in" alt="iphone">
+			</div>
+			<div class="works__slider js-slider">
+				{% for item in [
+					{
+						img: 'file',
+						title: 'Never miss a payment',
+						value: 'Pay all bills with one click, get categorisation of expenses'
+					},
+					{
+						img: 'file',
+						title: 'Store all documents',
+						value: 'Upload personal identification documents, contracts and certificates'
+					},
+					{
+						img: 'home',
+						title: 'Get and compare quotes quickly',
+						value: 'Select contractors, follow progress,&nbsp;pay&nbsp;bills'
+					},
+					{
+						img: 'home',
+						title: 'Manage rental process and comm..',
+						value: 'Get quotes from the best letting agents and manage all from one place'
+					},
+					{
+						img: 'rent',
+						title: 'Keep track of incoming rent',
+						value: 'Get instant notifications on rent payments'
+					},
+					{
+						img: 'rent',
+						title: 'Get portfolio analysis',
+						value: 'Have a clear view of your income, expenses and tax'
+					}
+				] %}
+					<div class="works__slider-item">
+						<div class="works__item">
+							<div class="works__item-img">
+								<img src="img/{{item.img}}.svg" class="works__item-img-in" alt="icon">
+								<div class="works__item-img-line"></div>
+							</div>
+							<div class="works__item-title">{{item.title}}</div>
+							<div class="works__item-value">{{item.value | safe}}</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="works__description">
+		<div class="inner works__inner">
+			We have launched in 2008 in London as independent advisers to clients helping them to buy, finance and manage property in Prime London. But we never stop moving forwards. We are now bringing together sophisticated digital technology and our property management know how for every landlord and owner occupier in the UK
+		</div>
+	</div>
+</div>
+<!-- works end -->
